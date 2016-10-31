@@ -1,0 +1,34 @@
+{
+  "name": "eff-diceware-passphrase",
+  "version": "1.0.0",
+  "description": "Generate a cryptographically random password from EFF's improved Diceware word list",
+  "main": "index.js",
+  "dependencies": {
+    "secure-sample": "^1.0.2",
+    "secure-shuffle": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node example.js",
+    "generate-wordlist": "cat eff_large_wordlist.txt | cut -f2 | jq -sRc 'rtrimstr(\"\n\") | split(\"\n\")' > wordlist.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emilbayes/eff-diceware-passphrase.git"
+  },
+  "keywords": [
+    "EFF",
+    "Diceware",
+    "secure",
+    "crypto",
+    "passphrase",
+    "password",
+    "entropy"
+  ],
+  "author": "Emil Bay <github@tixz.dk>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emilbayes/eff-diceware-passphrase/issues"
+  },
+  "homepage": "https://github.com/emilbayes/eff-diceware-passphrase#readme"
+}
