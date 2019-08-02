@@ -26,3 +26,18 @@ module.exports.entropy = function (minimum) {
 
   return module.exports(Math.ceil(minimum / ENTROPY_PER_TOKEN))
 }
+module.exports.includes = function (word) {
+  var l = 0
+  var r = wordlist.length - 1
+
+  while (l <= r) {
+    var m = (l + r) >>> 1
+    var w = wordlist[m]
+
+    if (word === w) return true
+    if (word < w) r = m - 1
+    else l = m  + 1
+  }
+
+  return false
+}
