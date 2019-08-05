@@ -48,9 +48,9 @@ $ browserify -g uglifyify -g unassertify example.js | uglifyjs -cm | gzip - | wc
 
 Generate a list of `count` words, randomly shuffled and without replacement.
 
-### `generatePassphrase.words(count)`
+### `const arr = generatePassphrase.words`
 
-Alias of above
+Sorted array of all words in the Diceware list
 
 ### `generatePassphrase.entropy(minimum)`
 

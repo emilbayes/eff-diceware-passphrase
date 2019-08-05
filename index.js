@@ -20,7 +20,7 @@ module.exports = function words (count) {
   }))
 }
 
-module.exports.words = module.exports
+module.exports.words = wordlist
 module.exports.entropy = function (minimum) {
   assert(minimum > 0, 'minimum entropy must be positive')
   assert(minimum <= NUMBER_OF_TOKENS * ENTROPY_PER_TOKEN, 'minimum entropy must be less than maximum possible entropy')
