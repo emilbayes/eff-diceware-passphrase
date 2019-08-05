@@ -52,7 +52,7 @@ Generate a list of `count` words, randomly shuffled and without replacement.
 
 Sorted array of all words in the Diceware list
 
-### `generatePassphrase.entropy(minimum)`
+### `const arr = generatePassphrase.entropy(minimum)`
 
 Convenience function for generating a password with at least `mimimum` bits of entropy.
 
@@ -66,7 +66,7 @@ or `-1` if not found.
 Like `Array.prototype.includes`. Returns `true` if part of
 `generatePassphrase.words` or `false` if not found.
 
-### `const bool = generatePassphrase.indexOfPrefix(prefix)`
+### `const i = generatePassphrase.indexOfPrefix(prefix)`
 
 Returns the index of the first occurrence of the prefix, or the end of the
 wordlist if no prefixes match. Can be used to slice the list for eg. autocomplete
