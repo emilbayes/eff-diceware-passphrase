@@ -4,6 +4,7 @@ var assert = require('assert')
 var wordlist = require('./wordlist.json')
 var sample = require('secure-sample')
 var shuffle = require('secure-shuffle')
+var binarySearch = require('binary-search-bounds')
 
 var NUMBER_OF_TOKENS = wordlist.length
 var ENTROPY_PER_TOKEN = Math.log(NUMBER_OF_TOKENS) / Math.log(2)
@@ -26,18 +27,21 @@ module.exports.entropy = function (minimum) {
 
   return module.exports(Math.ceil(minimum / ENTROPY_PER_TOKEN))
 }
+
+module.exports.indexOf = function (word) {
+  assert(typeof word === 'string', 'word must be string')
+
+  return binarySearch.eq(wordlist, word)
+}
+
 module.exports.includes = function (word) {
-  var l = 0
-  var r = wordlist.length - 1
+  assert(typeof word === 'string', 'word must be string')
 
-  while (l <= r) {
-    var m = (l + r) >>> 1
-    var w = wordlist[m]
+  return module.exports.indexOf(word) !== -1
+}
 
-    if (word === w) return true
-    if (word < w) r = m - 1
-    else l = m  + 1
-  }
+module.exports.indexOfPrefix = function (word) {
+  assert(typeof prefix === 'string', 'prefix must be string')
 
-  return false
+  return binarySearch.ge(wordlist, word)
 }
