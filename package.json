@@ -4,6 +4,7 @@
   "description": "Generate a cryptographically random password from EFF's improved Diceware word list",
   "main": "index.js",
   "dependencies": {
+    "binary-search-bounds": "^2.0.4",
     "secure-sample": "^1.0.2",
     "secure-shuffle": "^1.1.0"
   },
