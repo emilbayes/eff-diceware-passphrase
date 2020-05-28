@@ -6,8 +6,8 @@
   "dependencies": {
     "binary-search-bounds": "^2.0.4",
     "nanoassert": "^2.0.0",
-    "secure-sample": "^1.0.2",
-    "secure-shuffle": "^1.1.0"
+    "secure-sample": "^2.0.0",
+    "secure-shuffle": "^2.0.0"
   },
   "devDependencies": {},
   "scripts": {
