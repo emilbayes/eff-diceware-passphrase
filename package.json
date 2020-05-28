@@ -14,6 +14,10 @@
     "test": "node example.js",
     "generate-wordlist": "cat eff_large_wordlist.txt | cut -f2 | jq -sRc 'rtrimstr(\"\n\") | split(\"\n\")' > wordlist.json"
   },
+  "files": [
+    "index.js",
+    "wordlist.json"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/emilbayes/eff-diceware-passphrase.git"
