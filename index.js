@@ -40,8 +40,8 @@ module.exports.includes = function (word) {
   return module.exports.indexOf(word) !== -1
 }
 
-module.exports.indexOfPrefix = function (word) {
+module.exports.indexOfPrefix = function (prefix) {
   assert(typeof prefix === 'string', 'prefix must be string')
 
-  return binarySearch.ge(wordlist, word)
+  return binarySearch.ge(wordlist, prefix)
 }
